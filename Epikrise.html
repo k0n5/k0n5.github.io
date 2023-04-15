@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arztbrief</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 12px 0 0 0;
+            display: block;
+        }
+        h2 {
+            font-size: 12px;
+            font-weight: bold;
+            margin: 12px 0 0px 0;
+            display: block;
+        }
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            padding: 2px;
+            margin-bottom: 2px;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 2px;
+            margin-left: 0;
+        }
+        .box:first-of-type {
+            margin-left: 12px;
+        }
+        .selected {
+            background-color: #808080;
+            color: #000000;
+        }
+        .category {
+            margin-bottom: 20px;
+        }
+        #output {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 20px;
+            min-height: 100px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Anamnese</h1>
+
+    <h2>Leitsymptom</h2>
+    <div class="box" data-text="Es handelt sich um einen XX-jährigen Patienten, der // eine XX-jährige Patientin, die sich mit Lumboischialgien seit 3 Wochen, ausstrahlend in den lateralen Ober- und Unterschenkel und einer Fußheberparese seit 2 Wochen vorstellt.">Radikuläres Syndrom</div>
+    <div class="box" data-text="Es handelt sich um einen XX-jährigen Patienten, der // eine XX-jährige Patientin, die sich einer rechtsseitigen Hemiparese seit 2 Wochen vorstellt.">Hemiparese</div>
+
+    <h2>Grund für stationäre Aufnahme</h2>
+    <div class="box" data-text="Die stationäre Aufnahme erfolgt zur operativen Therapie">Operative Therapie</div>
+    <div class="box" data-text="Die stationäre Aufnahme erfolgt zur weiteren Diagnostik.">Weitere Diagnostik</div>
+    <div class="box" data-text="Die stationäre Aufnahme erfolgt zur weiteren Diagnostik und Therapie.">Weitere Diagnostik und Therapie</div>
+
+    <h1>Status</h1>
+
+    <h2>Allgemein</h2>
+    <div class="box" data-text="Wach, orientiert. ">Wach, orientiert.</div>
+    <div class="box" data-text="Kein Meningismus. ">Kein Meningismus.</div>
+
+    <h2>Hirnnerven</h2>
+
+    <h2>Sensomotorik</h2>
+
+    <h2>Kleinhirn</h2>
+    <div class="box" data-text="Finger-Nase-Versuch beidseits metrisch.">FNV metrisch</div>
+    <div class="box" data-text="Finger-Nase-Versuch links // rechts dysmetrisch.">FNV dysmetrisch</div>
+    <div class="box" data-text="Romberg negativ.">Romberg negativ.</div>
+    <div class="box" data-text="Romberg positiv.">Romberg positiv.</div>
+    <div class="box" data-text="Stand und Gang sicher.">Stand und Gang sicher.</div>
+    <div class="box" data-text="Seiltänzergang sicher.">Seiltänzergang sicher.</div>
+    <div class="box" data-text="Seiltänzergang unsicher.">Seiltänzergang unsicher.</div>
+
+    <h2>Neuropsycho</h2>
+    <div class="box" data-text="Sprachproduktion und -verständnis unauffällig. ">Sprache normal.</div>
+
+    <h1>Epikrise</h1>
+
+    <h2>Operation</h2>
+    <div class="box" data-text="Nach ausführlicher Aufklärung über Chancen und Risiken führten wir o.g. Eingriff komplikationslos in Allgemeinanästhesie durch.">Durchführung Eingriff</div>
+
+    <h2>Postoperativer Status</h2>
+    <div class="box" data-text="Postoperativ bestand kein neues fokalneurologisches Defizit.">Kein neues Defizit</div>
+
+    <h2>Postoperative Bildgebung</h2>
+    <div class="box" data-text="In der postoperativen MRT-Kontrolle zeigte sich ein regelrechter postoperativer Befund ohne Hinweis auf ein Tumorresiduum.">MRT: Vollständige Tumorresektion</div>
+    <div class="box" data-text="In der postoperativen MRT-Kontrolle zeigte sich erwartungsgemäß ein Tumorresiduum.">MRT: Teilweise Tumorresektion</div>
+    <div class="box" data-text="Die postoperative CT-Kontrolle zeigte einen regelrechten postoperativen Befund mit intraperitonealer Lage des Shuntkatheters.">CT: Shunt</div>
+    <div class="box" data-text="Die postoperative CT-Kontrolle zeigte eine regelrechte Materiallage.">CT: Materiallage</div>
+    <div class="box" data-text="Die postoperative Röntgen-Kontrolle zeigte eine regelrechte Materiallage.">Röntgen: Materiallage</div>    
+
+    <h2>Verlauf auf Normalstation</h2>
+    <div class="box" data-text="Wir dosierten die analgetische Therapie bedarfsgerecht ein.">Schmerzmedis</div>
+    <div class="box" data-text="Der Patient // Die Patientin wurde physiotherapeutisch mobilisiert.">Physio</div>
+    <div class="box" data-text="Die Wundverhältnisse waren stets trocken und reizlos.">Schmerzmedis</div>
+
+    <h2>Entlassung</h2>
+    <div class="box" data-text="Die Entlassung erfolgt am heutigen Tag in Ihre geschätzte Weiterbetreuung.">Entlassung in Weiterbetreuung</div>
+    <div class="box" data-text="Die Entlassung erfolgt am heutigen Tag in die Häuslichkeit.">Entlassung in Häuslichkeit</div>
+
+    <h2>Ausstehend</h2>
+    <div class="box" data-text="Zum Zeitpunkt der Entlassung steht der histopathologische Befund noch aus. Wir berichten diesbezüglich nach.">Histo ausstehend</div>
+    <div class="box" data-text="Wir haben den Fall in unserer interdisziplinären Tumorkonferenz angemeldet. Über deren Empfehlung berichten wir nach.">Histo ausstehend</div>
+
+     <h2>Empfehlungen</h2>
+    <div class="box" data-text="Fadenzug am 12.-14. postoperativen Tag.<br><br>Bedarfsgerechte Analgesie.<br><br>Prophylaktische Antikoagulation bis zur vollständigen Mobilisierung.<br><br>Bei akuten neurologischen Defiziten oder Zeichen einer Wundheilungsstörung oder -infektion bitte Vorstellung in unserer Rettungsstelle.<br><br>">Standard</div>
+    <div class="box" data-text="Wir bitten um Vorstellung in unserer Hochschulambulanz am XX.XX.2023 um XX:XX Uhr. Telefonische Rücksprach unter (030) 450 XXX XXX.<br><br>">Ambulanztermin</div>
+     <div class="box" data-text="Wir bitten um Vorstellung in der Klinik für Strahlentherapie XX.XX.2023 um XX:XX Uhr. Telefonische Rücksprach unter (030) 450 XXX XXX.<br><br>">Strahlentermin</div>
+    <div class="box" data-text="Pausieren von ASS bis zum 10. postoperativen Tag.<br><br>">ASS</div>
+    <div class="box" data-text="Pausieren der oralen Antikoagulation bis zum 10. postoperativen Tag.<br><br>">Antikoagulation</div>
+    <div id="output"></div>
+
+    <button id="copy-btn">Kopieren</button>
+
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        const output = document.getElementById('output');
+        const copyBtn = document.getElementById('copy-btn');
+
+        boxes.forEach(box => {
+            box.addEventListener('click', () => {
+                if (!box.classList.contains('selected')) {
+                    box.classList.add('selected');
+                    const text = box.getAttribute('data-text');
+                    output.innerHTML += text + '';
+                } else {
+                    box.classList.remove('selected');
+                    const text = box.getAttribute('data-text');
+                    output.innerHTML = output.innerHTML.replace(text + '', '');
+                }
+            });
+            if (box.classList.contains('default') && box.classList.contains('selected')) {
+                const text = box.getAttribute('data-text');
+                output.innerHTML += text + '';
+            }
+        });
+
+        copyBtn.addEventListener('click', () => {
+            const textToCopy = output.innerText;
+            navigator.clipboard.writeText(textToCopy)
+        });
+    </script>
+
+
+</body>
+</html>
+
